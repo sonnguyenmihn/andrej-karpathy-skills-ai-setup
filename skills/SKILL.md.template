@@ -1,0 +1,76 @@
+---
+name: <kebab-case-name>
+description: <one paragraph describing exactly when this skill applies. Be specific. The model will only load this skill when the description matches the task. Include trigger words a user might say.>
+---
+
+# <Human-Readable Title>
+
+## Purpose
+
+<One paragraph. What this skill does in plain language. Not "what" mechanically — _why_ a user would want this run.>
+
+## When to use this skill
+
+Use when:
+- <trigger condition>
+- <trigger condition>
+
+Don't use when:
+- <case where another skill or no skill is better>
+
+## Inputs the user (or agent) provides
+
+- <input> — <what it should contain>
+- <input> — <what it should contain>
+
+## Procedure
+
+1. <step>
+   - <sub-detail>
+   - <sub-detail>
+2. <step>
+3. <step>
+4. **Verify**: <how to confirm the procedure succeeded>
+
+## Examples
+
+### Example 1: <scenario>
+
+**Input**: <example input>
+
+**Output**: <example output>
+
+**What to notice**: <anything subtle about this example>
+
+### Example 2: <scenario>
+
+<...>
+
+## Common failure modes
+
+- **<failure>** — <how to recognize, how to recover>
+- **<failure>** — <how to recognize, how to recover>
+
+## Related
+
+- Other skills that pair with this one: `<other-skill>`, `<other-skill>`
+- Rules that apply: `<rule-file>`
+
+---
+
+## Files in this skill folder
+
+```
+<skill-name>/
+├── SKILL.md              ← this file
+├── <script>.sh           ← <what it does>
+├── <data>.json           ← <what it contains>
+└── examples/             ← <if relevant>
+```
+
+**Notes on filling this out**:
+
+- Keep the `description` in frontmatter informative — it's the only thing always in the system prompt. Test by asking: "given only the description, would I know when to use this?"
+- The body is loaded only when the skill is triggered. You can be more verbose here.
+- If the skill calls scripts, put them in this folder and reference them with relative paths.
+- One skill, one purpose. If you find yourself writing "and also...", split into two skills.

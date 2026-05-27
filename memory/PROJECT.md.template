@@ -1,0 +1,67 @@
+# PROJECT.md
+
+> What this project is, why it exists, and what's in and out of scope.
+> **Update**: when scope changes. Otherwise rare.
+
+## What
+
+<One paragraph. No jargon. Imagine explaining to a smart friend who doesn't work in your industry.>
+
+## Why
+
+<The user problem this solves. The "if this project disappeared tomorrow, what would the user lose?" answer.>
+
+## Who it's for
+
+<Primary user, secondary user. Specific roles or personas, not "developers" or "everyone".>
+
+## Scope
+
+**In scope:**
+
+- <thing>
+- <thing>
+- <thing>
+
+**Out of scope:**
+
+- <thing — say _why_ it's out of scope, so future-you doesn't re-relitigate>
+- <thing>
+
+## Constraints
+
+- **Stack / tech**: <languages, frameworks, services, things-we-must-use>
+- **Deployment**: <where this runs in production>
+- **Timeline / deadline**: <if any>
+- **Quality bar**: <e.g., 99.9% uptime, p99 < 300ms, zero data loss>
+- **Other**: <licensing, compliance, organizational, etc.>
+
+## Current milestone
+
+**Milestone**: <name>
+
+**Goal**: <one sentence>
+
+**Definition of done** (verifiable, not vague):
+
+- [ ] <criterion>
+- [ ] <criterion>
+- [ ] <criterion>
+
+## Stakeholders
+
+- **Owner**: <human who decides>
+- **Reviewers**: <who must sign off on changes>
+- **Users / customers**: <who's affected by this shipping>
+
+## Pointers
+
+- Code lives in: <path>
+- Tests: <path>
+- Docs: <link>
+- Designs / specs: <link>
+- Related projects: <link>
+
+---
+
+_Last updated: <date>, by <name>_

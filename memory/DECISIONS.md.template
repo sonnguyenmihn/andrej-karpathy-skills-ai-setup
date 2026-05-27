@@ -1,0 +1,43 @@
+# DECISIONS.md
+
+> Lightweight architecture decision records. Log non-trivial choices and their reasoning.
+> **Update**: per decision. Append, don't rewrite.
+
+A decision is worth logging if a future-you reading this would say _"interesting, I might have done it differently"_ or _"I'm glad I know why this happened"_.
+
+Skip trivia (variable names, formatting, etc.).
+
+---
+
+## Template
+
+```
+## YYYY-MM-DD: <one-line decision>
+
+**Context**: <why this decision was needed>
+
+**Choice**: <what we decided>
+
+**Alternatives considered**:
+- <option A> — rejected because <reason>
+- <option B> — rejected because <reason>
+
+**Reversibility**: <easy / moderate / hard to undo later>
+
+**Open follow-ups** (optional): <things we deferred>
+```
+
+---
+
+## Decisions
+
+<!-- Append new decisions below this line, newest at the top. -->
+
+## YYYY-MM-DD: <example decision>
+
+**Context**: <example>
+**Choice**: <example>
+**Alternatives considered**:
+- <example>
+- <example>
+**Reversibility**: easy

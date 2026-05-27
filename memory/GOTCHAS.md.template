@@ -1,0 +1,49 @@
+# GOTCHAS.md
+
+> Non-obvious things that bit us. Lessons learned. Anti-patterns specific to _this_ codebase.
+> **Update**: whenever you hit a non-obvious gotcha. Append, don't rewrite.
+
+If you find yourself thinking _"I wish I'd known this an hour ago"_ — it goes here.
+
+If you find yourself thinking _"why is the agent making this same mistake again?"_ — it also goes here. Then it goes into a rule or a hook.
+
+---
+
+## Template
+
+```
+## <short symptom keywords for grep>
+
+**Symptom**: <how you'd notice this>
+**Cause**: <what was actually going on>
+**Fix**: <what worked>
+**Note**: <related caveats, why this is non-obvious, etc.>
+
+_Logged: <date>, by <name>_
+```
+
+---
+
+## Gotchas
+
+<!-- Append new gotchas below, newest at the top. -->
+
+## <example: "migration script silently corrupts DB if seed runs first">
+
+**Symptom**: Users reported missing rows in `accounts` table after a deploy.
+**Cause**: The CI pipeline runs `seed` before `migrate` on fresh databases. The seed depends on a column added in the migration, so it inserts NULLs, then the migration's NOT NULL constraint silently truncates them.
+**Fix**: Reorder CI pipeline; add `--strict` flag to migration so it errors on NULLs instead of silently truncating.
+**Note**: This took 4 hours to find because the symptom looks like a permissions issue. If you see "missing rows after deploy," check pipeline order before anything else.
+
+_Logged: 2025-XX-XX_
+
+---
+
+## <example: "OAuth callback fails in staging only">
+
+**Symptom**: Auth works in dev, fails in staging with "invalid redirect URI."
+**Cause**: Staging uses a wildcard subdomain (`*.staging.example.com`) but Google OAuth only allows exact match for redirect URIs.
+**Fix**: Register each subdomain explicitly with Google. Document the list in `infra/oauth-redirects.md`.
+**Note**: Wildcard DNS != wildcard OAuth. Other providers have the same limitation.
+
+_Logged: 2025-XX-XX_

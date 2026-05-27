@@ -1,0 +1,52 @@
+# PROGRESS.md
+
+> Current state. Where we are, what's in flight, what's next.
+> **Update**: every session. Replace the "Where we are" paragraph each time.
+
+## Where we are
+
+<One paragraph. What's the current state of the project? What's just been done? What's blocking? Updated every session — overwrite, don't append.>
+
+_Updated: <date>, by <name>_
+
+---
+
+## In flight
+
+<Tasks currently being worked on. Format:>
+
+- [ ] **<task name>** — <owner> — <status / blockers>
+- [ ] **<task name>** — <owner> — <status / blockers>
+
+---
+
+## Next up
+
+<Tasks queued, in rough priority order:>
+
+- <task>
+- <task>
+- <task>
+
+---
+
+## Done (this milestone)
+
+<Append-only log of completed work in the current milestone. Move to "Done (history)" when starting a new milestone:>
+
+- [x] <YYYY-MM-DD> — <task> — <brief outcome>
+- [x] <YYYY-MM-DD> — <task> — <brief outcome>
+
+---
+
+## Done (history)
+
+<Older completed work. Reset or archive when this gets long.>
+
+---
+
+## Parked / dropped
+
+<Things we considered, started, or planned, but explicitly stopped. Useful so we don't re-discover them:>
+
+- **<thing>** — <why we parked or dropped it>
